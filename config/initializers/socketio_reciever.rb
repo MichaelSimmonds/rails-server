@@ -19,4 +19,3 @@ end
 socket.on :error do |err|
   p err
 end
-# END

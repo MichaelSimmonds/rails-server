@@ -1,5 +1,11 @@
 <h1>Socketios#index</h1>
 <p>Find me in app/views/socketios/index.html.erb</p>
+<div class="chart">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
 <%@socketio.each do |dataPoint|%>
   <p><%=dataPoint.timestamp%> => <%= dataPoint.hkld %></p>
 <%end%>
