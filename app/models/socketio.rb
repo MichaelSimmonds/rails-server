@@ -1,0 +1,2 @@
+class Socketio < ApplicationRecord
+end
