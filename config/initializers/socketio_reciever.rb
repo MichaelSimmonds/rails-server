@@ -15,15 +15,15 @@ socket.on :data do |data|
   dataPoint.hkld = data["hkld"]
   dataPoint.timestamp = data["timestamp"]
   dataPoint.save!
-  if i >= 0
+  if i > 0
     # @socketio = "AARRSSEE"
     @socketio = Socketio.select(:hkld).order(created_at: :asc).reverse_order.limit(10).reverse
     @output = []
     @socketio.each do |item|
       @output << item['hkld']
     end
-    @output = @output.join(",")
-    ActionCable.server.broadcast 'room_channel', {content:@output}
+    # @output = @output.join(",")
+    ActionCable.server.broadcast 'room_channel', @output
     i = 0
   end
   i+=1

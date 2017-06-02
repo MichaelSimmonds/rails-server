@@ -13,4 +13,34 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require d3
+//= require drawChart
 //= require_tree .
+
+
+// function drawChart(chartData) {
+//   // console.log(chartData)
+//   var x = d3.scaleLinear()
+//   .domain([32.8, d3.max(chartData, function(d){return d.hkld;})])
+//   .range([0, 420]);
+//
+//   // select+update
+//   var selection = d3.select(".chart")
+//   .selectAll("div")
+//     .data(chartData)
+//     // "enter"+add
+//   selection.enter().append("div")
+//     .style("width", function(d) {
+//       return x(d.hkld) + "px";
+//     })
+//     .text(function(d) {
+//       return d.hkld;
+//     })
+//     // remove (NOT FULLY WORKING)
+//     .on("click", function(e, i){
+//       chartData.splice(i, 1);
+//       drawChart();
+//     });
+//     // "exit"+clean up spliced points
+//     selection.exit().remove();
+// }
