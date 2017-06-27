@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project that takes data from an websocket on port 8080 and stores the data in a sqlite database. As each datapoint is stored, the database is queried for the last 10 values and these are displayed on a basic chart made from div elements (now uses d3 to some extent).
 
-Things you may want to cover:
+_relevant files_
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+socket.io reciever, db storage + query - config/initializers/socketio_reciever
+ActionCable - app/assets/javascripts/channels/room.coffee
+Drawing Chart - app/assets/javascripts/drawChart.js
+Chart view - app/views/socketios/index.html
