@@ -4,7 +4,7 @@ This is a project that takes data from an websocket on port 8080 and stores the 
 
 _relevant files_
 
-*socket.io reciever, db storage + query - config/initializers/socketio_reciever
-*ActionCable - app/assets/javascripts/channels/room.coffee
-*Drawing Chart - app/assets/javascripts/drawChart.js
-*Chart view - app/views/socketios/index.html
+* socket.io reciever, db storage + query -> config/initializers/socketio_reciever
+* ActionCable -> app/assets/javascripts/channels/room.coffee
+* Drawing Chart -> app/assets/javascripts/drawChart.js
+* Chart view -> app/views/socketios/index.html
